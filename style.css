@@ -10,10 +10,10 @@ body {
     display: block;
     text-align: right;
 }
-.info img {
+.info__img {
     width: 100%;
 }
-.info .info__btn {
+.info .info__btn{
     font-family: fantasy, cursive;
 }
 
@@ -31,20 +31,20 @@ body {
     display: inline-block;
     flex-grow: 1
 }
-.add__task-wrapper {
+.app__task-wrapper {
     display: flex;
 }
-ul {
+.app__list {
     margin:0;
     padding: 0px;
 }
-li, h3 {
+.app__list-item, .app__title {
     list-style:none;
 }
-input,button{
+.app__input, .app__btn{
     outline:none;
 }
-button {
+.app__btn {
     background: none;
     border: 0px;
     color: #888;
@@ -53,12 +53,12 @@ button {
     font-family: Lato, sans-serif;
     cursor: pointer;
 }
-button:hover {
+.app__btn:hover {
     color: #3a3A3a;
 }
 /* Heading */
-h3,
-label[for='add__task'] {
+.app__title,
+.app__label-add {
     color: #333;
     font-weight: 700;
     font-size: 15px;
@@ -67,7 +67,7 @@ label[for='add__task'] {
     margin: 0;
     text-transform: uppercase;
 }
-input[type="text"] {
+.app__input-task {
     margin: 0;
     font-size: 18px;
     line-height: 18px;
@@ -79,16 +79,16 @@ input[type="text"] {
     font-family: Lato, sans-serif;
     color: #888;
 }
-input[type="text"]:focus {
+.app__input-task:focus {
     color: #333;
 }
 
 /* New Task */
-label[for='add__task'] {
+.app__label-add {
     display: block;
     margin: 0 0 20px;
 }
-input#add__task {
+.app__input#app__add-task {
     width: 318px;
 }
 
@@ -115,7 +115,7 @@ li > label {
     font-size: 18px;
     width: 226px;
 }
-li >    input[type="text"] {
+li >    .app__input-task {
     width: 226px
 }
 button.delete img {
@@ -128,21 +128,21 @@ button.delete img:hover {
 }
 
 /* Completed */
-ul#done label {
+.app__list#app__done label {
     text-decoration: line-through
     color: #888;
 }
 
 /* Edit Task */
-ul li input[type=text] {
+.app__list li input[type=text] {
     display:none
 }
 
-ul li.editMode input[type=text] {
+.app__list li.app__edit-mode input[type=text] {
     display:inline-block;
     width:224px
 }
 
-ul li.editMode label {
+.app__list li.app__edit-mode label {
     display:none;
 }

@@ -8,10 +8,10 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput=document.getElementById("add__task");//Add a new task.
+var taskInput=document.getElementById("app__add-task");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder=document.getElementById("todo");//ul of #incompleteTasks
-var completedTasksHolder=document.getElementById("done");//completed-tasks
+var incompleteTaskHolder=document.getElementById("app__todo");//ul of #incompleteTasks
+var completedTasksHolder=document.getElementById("app__done");//completed-tasks
 
 
 //New task list item
@@ -61,14 +61,14 @@ var createNewTaskElement=function(taskString){
 
 var addTask=function(){
     console.log("Add Task...");
-    //Create a new list item with the text from the #add__task:
+    //Create a new list item with the text from the #new-task:
     if (!taskInput.value) return;
     var listItem=createNewTaskElement(taskInput.value);
 
     //Append listItem to incompleteTaskHolder
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);
-
+    
     taskInput.value="";
 
 }
@@ -85,7 +85,7 @@ var editTask=function(){
     var editInput=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector("label");
     var editBtn=listItem.querySelector(".edit");
-    var containsClass=listItem.classList.contains("editMode");
+    var containsClass=listItem.classList.contains("app__edit-mode");
     //If class of the parent is .editmode
     if(containsClass){
 
@@ -99,7 +99,7 @@ var editTask=function(){
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("editMode");
+    listItem.classList.toggle("app__edit-mode");
 };
 
 
@@ -161,9 +161,11 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
 
 
     //Bind editTask to edit button.
+    editButton.classList.add('app__btn');
     editButton.onclick=editTask;
     //Bind deleteTask to delete button.
     deleteButton.onclick=deleteTask;
+    deleteButton.classList.add('app__btn');
     //Bind taskCompleted to checkBoxEventHandler.
     checkBox.onchange=checkBoxEventHandler;
 }
