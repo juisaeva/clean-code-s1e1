@@ -35,14 +35,14 @@ body {
     display: flex;
 }
 .app__list {
-    margin:0;
+    margin: 0;
     padding: 0px;
 }
 .app__list-item, .app__title {
-    list-style:none;
+    list-style: none;
 }
 .app__input, .app__btn{
-    outline:none;
+    outline: none;
 }
 .app__btn {
     background: none;
@@ -135,14 +135,14 @@ button.delete img:hover {
 
 /* Edit Task */
 .app__list li input[type=text] {
-    display:none
+    display: none
 }
 
 .app__list li.app__edit-mode input[type=text] {
-    display:inline-block;
-    width:224px
+    display: inline-block;
+    width: 224px
 }
 
 .app__list li.app__edit-mode label {
-    display:none;
+    display: none;
 }
