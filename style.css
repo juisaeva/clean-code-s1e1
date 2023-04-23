@@ -37,7 +37,7 @@
 .app__task-name {
   width: 56%;
   display: inline-block;
-  flex-grow: 1
+  flex-grow: 1;
 }
 
 .app__add-wrapper {
@@ -141,7 +141,7 @@
 }
 
 .app__task {
-  width: 226px
+  width: 226px;
 }
 
 .app__btn-img {
@@ -156,18 +156,18 @@
 
 /* Completed */
 .app__list--complete .app__task-name{
-  text-decoration: line-through
+  text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 .app__list .app__task {
-  display: none
+  display: none;
 }
 
 .app__edit-mode .app__task {
   display: inline-block;
-  width: 224px
+  width: 224px;
 }
 
 .app__edit-mode .app__task-name {
