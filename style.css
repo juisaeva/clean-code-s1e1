@@ -4,47 +4,59 @@
   color: #333;
   font-family: Lato, sans-serif;
 }
+
 .details {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
+
 .details__img {
   width: 100%;
 }
+
 .details .details__more {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
+
   .details { text-align: center;
+
 }
 }
+
 .app {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
+
 .app__task,
 .app__task-name {
   width: 56%;
   display: inline-block;
   flex-grow: 1
 }
+
 .app__add-wrapper {
   display: flex;
 }
+
 .app__list {
   margin:0;
   padding: 0px;
 }
+
 .app__item, .app__title {
   list-style:none;
 }
+
 .app__task,.app__task,.app__btn--edit,.app__btn--delete,.app__add-task{
   outline:none;
 }
+
 .app__btn--edit,
 .app__btn--delete,
 .app__btn--new {
@@ -56,11 +68,13 @@
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
+
 .app__btn--edit:hover,
 .app__btn--delete:hover,
 .app__btn--new:hover {
   color: #3a3a3a;
 }
+
 /* Heading */
 .app__title,
 .app__add-task-name {
@@ -72,6 +86,7 @@
   margin: 0;
   text-transform: uppercase;
 }
+
 .app__task {
   margin: 0;
   font-size: 18px;
@@ -84,6 +99,7 @@
   font-family: Lato, sans-serif;
   color: #888;
 }
+
 .app__task:focus {
   color: #333;
 }
@@ -93,6 +109,7 @@
   display: block;
   margin: 0 0 20px;
 }
+
 .app__task:first-child {
   width: 318px;
 }
@@ -107,6 +124,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .app__item > * {
   vertical-align: middle;
 }
@@ -114,20 +132,24 @@
 .app__checkbox {
   margin: 0 10px;
 }
+
 .app__task-name {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
+
 .app__task {
   width: 226px
 }
+
 .app__btn-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
+
 .app__btn-img:hover{
   transform: rotateZ(0);
 }
