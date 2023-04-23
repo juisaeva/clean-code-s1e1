@@ -45,16 +45,16 @@
 }
 
 .app__list {
-  margin:0;
+  margin: 0;
   padding: 0px;
 }
 
 .app__item, .app__title {
-  list-style:none;
+  list-style: none;
 }
 
 .app__task,.app__task,.app__btn--edit,.app__btn--delete,.app__add-task{
-  outline:none;
+  outline: none;
 }
 
 .app__btn--edit,
@@ -162,14 +162,14 @@
 
 /* Edit Task */
 .app__list .app__task {
-  display:none
+  display: none
 }
 
 .app__edit-mode .app__task {
-  display:inline-block;
-  width:224px
+  display: inline-block;
+  width: 224px
 }
 
 .app__edit-mode .app__task-name {
-  display:none;
+  display: none;
 }
