@@ -22,9 +22,10 @@
 
 @media (max-width:768px) {
 
-  .details { text-align: center;
+  .details { 
+    text-align: center;
+  }
 
-}
 }
 
 .app {
@@ -49,11 +50,16 @@
   padding: 0px;
 }
 
-.app__item, .app__title {
+.app__item, 
+.app__title {
   list-style: none;
 }
 
-.app__task,.app__task,.app__btn--edit,.app__btn--delete,.app__add-task{
+.app__task,
+.app__task,
+.app__btn--edit,
+.app__btn--delete,
+.app__add-task {
   outline: none;
 }
 
@@ -105,7 +111,7 @@
 }
 
 /* New Task */
-.app__add-task-name{
+.app__add-task-name {
   display: block;
   margin: 0 0 20px;
 }
@@ -150,12 +156,12 @@
   transition: transform 200ms ease-in;
 }
 
-.app__btn-img:hover{
+.app__btn-img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.app__list--complete .app__task-name{
+.app__list--complete .app__task-name {
   text-decoration: line-through;
   color: #888;
 }
