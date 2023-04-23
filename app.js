@@ -8,10 +8,10 @@
 
 // Event handling, user interaction is what starts the code execution.
 
-var taskInput=document.getElementById("new-task");//Add a new task.
+var taskInput=document.getElementById("app__add-task");//Add a new task.
 var addButton=document.getElementsByTagName("button")[0];//first button
-var incompleteTaskHolder=document.getElementById("incompleteTasks");//ul of #incompleteTasks
-var completedTasksHolder=document.getElementById("completed-tasks");//completed-tasks
+var incompleteTaskHolder=document.getElementById("app__list--incomplete");//ul of #incompleteTasks
+var completedTasksHolder=document.getElementById("app__list--complete");//completed-tasks
 
 
 //New task list item
@@ -33,18 +33,21 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='task';
+    label.className='app__task-name';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.classList = 'app__checkbox';
     editInput.type="text";
-    editInput.className="task";
+    editInput.className="app__task";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit";
+    editButton.className="app__btn--edit";
 
-    deleteButton.className="delete";
+    deleteButton.className="app__btn--delete";
     deleteButtonImg.src='./remove.svg';
+    deleteButtonImg.className = 'app__btn-img';
+    deleteButtonImg.setAttribute('alt', 'delete icon'); 
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -65,6 +68,8 @@ var addTask=function(){
     if (!taskInput.value) return;
     var listItem=createNewTaskElement(taskInput.value);
 
+    listItem.classList = "app__item";
+
     //Append listItem to incompleteTaskHolder
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);
@@ -84,8 +89,8 @@ var editTask=function(){
 
     var editInput=listItem.querySelector('input[type=text]');
     var label=listItem.querySelector("label");
-    var editBtn=listItem.querySelector(".edit");
-    var containsClass=listItem.classList.contains("editMode");
+    var editBtn=listItem.querySelector(".app__btn--edit");
+    var containsClass=listItem.classList.contains("app__edit-mode");
     //If class of the parent is .editmode
     if(containsClass){
 
@@ -99,7 +104,7 @@ var editTask=function(){
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("editMode");
+    listItem.classList.toggle("app__edit-mode");
 };
 
 
@@ -156,8 +161,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
     var checkBox=taskListItem.querySelector("input[type=checkbox]");
-    var editButton=taskListItem.querySelector("button.edit");
-    var deleteButton=taskListItem.querySelector("button.delete");
+    var editButton=taskListItem.querySelector("button.app__btn--edit");
+    var deleteButton=taskListItem.querySelector("button.app__btn--delete");
 
 
     //Bind editTask to edit button.
